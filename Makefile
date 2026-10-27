@@ -2,7 +2,7 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 NAME = libftprintf.a
 
-SRCS = printf.c
+SRCS = ft_printf.c ft_functions.c
 
 OBJS = $(SRCS:.c=.o)
 
@@ -12,7 +12,7 @@ $(NAME):$(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@//Read it as: “to make any X.o, take X.c and compile it with -c.”
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJS)
