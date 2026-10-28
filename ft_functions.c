@@ -6,7 +6,7 @@
 /*   By: zabishev <zabishev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/28 12:48:07 by zabishev          #+#    #+#             */
-/*   Updated: 2026/10/28 12:55:24 by zabishev         ###   ########.fr       */
+/*   Updated: 2026/10/28 13:48:59 by zabishev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	ft_putnbr(int number)
 		i++;
 	}
 	count += i;
-	while (i-- != '\0')
+	while (i-- != 0)
 		write (1, &str[i], 1);
 	return (count);
 }
