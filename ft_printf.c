@@ -6,7 +6,7 @@
 /*   By: zabishev <zabishev@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/18 20:27:13 by zabishev          #+#    #+#             */
-/*   Updated: 2026/10/18 21:28:29 by zabishev         ###   ########.fr       */
+/*   Updated: 2026/10/28 13:18:24 by zabishev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@ int	ft_printf(const char *format, ...)
 	{
 		if (format[i] != '%')
 			count += ft_print_char(format[i]);
-		else if (format[i+1] == '\0')
-			break;
+		else if (format[i + 1] == '\0')
+			break ;
 		else if (format[i] == '%')
 		{
-			count += ft_dispatcher(format[i+1], &ap);
+			count += ft_dispatcher(format[i + 1], &ap);
 			i++;
 		}
 		i++;
@@ -42,7 +42,7 @@ int	ft_printf(const char *format, ...)
 
 int	ft_print_char(char c)
 {
-	return (write(1, &c, 1));//сначала печатает символ, а потом возвращает число 1 при успехе и -1 наоборот
+	return (write(1, &c, 1));
 }
 
 int	ft_dispatcher(char c, va_list *ap)
